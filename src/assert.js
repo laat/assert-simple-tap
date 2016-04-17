@@ -1,11 +1,11 @@
-import native from 'assert'
-import YAML from 'yamljs'
+const native = require('assert')
+const YAML = require('yamljs')
+
+console.log('TAP version 13')
 
 let tests = 0
 let passes = 0
 let failures = 0
-
-console.log('TAP version 13')
 
 function printError (err) {
   const message = {
@@ -17,8 +17,6 @@ function printError (err) {
   console.log(YAML.stringify(message, 4).replace(/^/gm, '  '))
   console.log('  ...')
 }
-function trace (message) { return function (x) { console.log(message, x); return x; }}; // eslint-disable-line
-const t = trace('debug')
 
 function test (message, fn) {
   return ((...args) => {
@@ -69,8 +67,6 @@ assert.throws = (block, error, message) => {
   return test(message, () => native.throws(block, error, message))
 }
 
-module.exports = assert
-
 process.on('uncaughtException', function (err) {
   console.log(`Bail out! Uncaught exception ${err.name}`)
   printError(err)
@@ -85,3 +81,5 @@ process.on('exit', function (code) {
     console.log('# fail ' + failures)
   }
 })
+
+module.exports = assert
