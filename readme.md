@@ -20,9 +20,9 @@ $ npm install --save assert-simple-tap
 ## Usage
 
 ```javascript
-import assert from 'assert'
+import assert from 'assert-simple-tap'
 ```
 
 ## License
 
-MIT © [Sigurd Fosseng](github.com/laat)
+MIT © [Sigurd Fosseng](https://github.com/laat)
