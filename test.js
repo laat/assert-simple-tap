@@ -1,4 +1,5 @@
-import assert from './assert';
+'use strict';
+const assert = require('.');
 
 assert(true, 'assert');
 assert.deepEqual(1, 1, 'deepEqual');

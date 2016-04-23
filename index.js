@@ -1,3 +1,4 @@
+'use strict';
 /* eslint-disable no-console */
 const native = require('assert');
 const YAML = require('yamljs');
@@ -20,10 +21,11 @@ function printError(err) {
 }
 
 function test(message, fn) {
-  return ((...args) => {
+  return (() => {
+    const args = Array.prototype.slice.call(arguments);
     tests++;
     try {
-      fn(...args);
+      fn.apply(native, [args]);
       console.log(`ok ${tests} ${message || ''}`);
       passes++;
     } catch (err) {
