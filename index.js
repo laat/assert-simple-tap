@@ -90,6 +90,9 @@ process.on('exit', (code) => {
     console.log(`# tests ${tests}`);
     console.log(`# pass ${passes}`);
     console.log(`# fail ${failures}`);
+    if (failures > 0) {
+      process.reallyExit(1);
+    }
   }
 });
 
