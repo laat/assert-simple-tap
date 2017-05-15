@@ -1,6 +1,6 @@
 {
   "name": "assert-simple-tap",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "assert module with tap-output",
   "engines": {
     "node": ">=4"
