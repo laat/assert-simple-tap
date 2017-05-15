@@ -1,4 +1,5 @@
 'use strict';
+
 /* eslint-disable no-console */
 const native = require('assert');
 const YAML = require('yamljs');
