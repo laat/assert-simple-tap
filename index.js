@@ -17,7 +17,7 @@ function printError(err) {
     stack: err.stack.split("\n")
   };
   console.log("  ---");
-  console.log(tapYaml.stringify(message, 4) /*.replace(/^/gm, '  ')*/);
+  console.log(tapYaml.stringify(message, 4).replace(/^/gm, "  "));
   console.log("  ...");
 }
 
