@@ -6,9 +6,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test:spec": "node test.js",
-    "test": "npm run lint && npm run test:spec"
+    "test": "node test.js"
   },
   "author": {
     "name": "Sigurd Fosseng",
@@ -20,12 +18,7 @@
     "url": "https://github.com/laat/assert-simple-tap.git"
   },
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.2.0"
-  },
   "dependencies": {
-    "yamljs": "^0.2.10"
+    "tap-yaml": "^1.0.0"
   }
 }
